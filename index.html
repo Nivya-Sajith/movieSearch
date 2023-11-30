@@ -38,7 +38,7 @@ movie=mname.value;
            else
            {
                
-    console.log(mname.value);
+    try{
         let data=await fetch(`http://www.omdbapi.com/?t=${movie}&apikey=229397f8`)
 
 
@@ -61,7 +61,11 @@ result.innerHTML=htmldata;
 
 
         
-       }}
+       }}catch{
+               console.log("error")
+           }
+       }
+        
     </script>
 </body>
 
